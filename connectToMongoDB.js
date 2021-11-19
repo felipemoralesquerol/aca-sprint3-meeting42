@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const schema = { name: String, lastName: String, age: Number }
 const Users = mongoose.model("Users", schema);
 
-const uri = "{URI}";
+const uri = process.env.MONGODB_URI;
 
 mongoose.connect(uri);
 

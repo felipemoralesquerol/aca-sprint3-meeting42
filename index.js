@@ -17,13 +17,13 @@ app.use(cors());
 app.use(morgan('dev'));
 
 app.get('/', function (req, res) {
-    const texto = 'Esta es información obtenidad desde tu API Meeting 41!!';
+    const texto = 'Esta es información obtenidad desde tu API Meeting 42!!';
     console.log(texto)
     res.send(texto)
 })
 
 app.get('/version', function (req, res) {
-    res.send('API v1.0 (con soporte de RDS by AWS')
+    res.send('API v1.0 (con soporte de MongoDB)')
 })
 
 
@@ -42,6 +42,7 @@ app.get('/users', async (req, res) => {
         res.send(users);
     } catch (err) {
         console.error(`Error: `, err.message);
+        res.status(500)
     }
 })
 

@@ -1,6 +1,6 @@
 module.exports = {
     apps: [{
-        name: "students",
+        name: "users-mongodb",
         script: "./index.js",
         watch: true,
         env_local: {
