@@ -7,6 +7,7 @@ const uri = process.env.MONGODB_URI;
 
 mongoose.connect(uri);
 
+
 exports.addNewUser = async function addNewUser() {
     const newPerson = { name: "Juan", lastName: "Perez", age: 24 };
     let newUser = new Users(newPerson);
